@@ -1,0 +1,7 @@
+java中Integer与Int转换：
+	Integer->int:
+		Integer A=new Integer();
+		int a=A.intValue();
+	int->Integer:
+		int a=3;
+		Integer A=new Integer(a);
