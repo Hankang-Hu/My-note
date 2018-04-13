@@ -1,0 +1,28 @@
+##############################################################
+##############################################################
+在服务器添加完公钥后报错
+1
+	
+sign_and_send_pubkey: signing failed: agent refused operation
+
+　　这个时候我们只要执行下
+1
+2
+	
+eval "$(ssh-agent -s)"
+ssh-add
+
+　　就可以了
+
+##############################################################
+##############################################################
+本地初始化的项目 与 github 版本不一致, 导致无法提交
+
+$ git pull origin master
+来自 https://github.com/itaken/python-login-demo
+ * branch            master     -> FETCH_HEAD
+fatal: 拒绝合并无关的历史
+
+解决方法
+
+在pull 时候, 添加–allow-unrelated-histories参数 即可.

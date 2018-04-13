@@ -1,0 +1,16 @@
+pt-get进程，所以解决方法也就是将这一进程关闭。
+具体如下：
+1、ps-aux 查出apt-get进程的PID，通常是一个四位数字。
+2、用kill PID代码 杀死进程
+3、用apt-get update，sudo apt-get dist-upgrade升级。
+
+方法一：
+执行一下 sudo dpkg --configure -a
+方法二：
+sudo rm /var/lib/apt/lists/lock
+方法三：
+1、ps-aux 查出apt-get进程的PID,
+2、用sudo kill PID代码 杀死进程(我都是找出带apt字样的进程格杀勿论)
+
+
+
